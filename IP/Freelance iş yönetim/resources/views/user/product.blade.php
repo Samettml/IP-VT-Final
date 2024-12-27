@@ -3,12 +3,12 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="section-heading">
-                    <h6>Latest Courses</h6>
-                    <h2>Latest Courses</h2>
+                    <h6>Aktif İlanlar</h6>
+                    <h2>Aktif İlanlar</h2>
                 </div>
             </div>
         </div>
-
+        <div class="ilanlar section" id="ilanlar">
         @foreach($data as $product)
         <ul class="event_filter">
             <li>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
             @endforeach
 
 

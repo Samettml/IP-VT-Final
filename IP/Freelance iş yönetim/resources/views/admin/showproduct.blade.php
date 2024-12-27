@@ -85,7 +85,6 @@
             <tr>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Quantity</th>
                 <th>Price</th>
                 <th>Image</th>
                 <th>Update</th>
@@ -97,13 +96,12 @@
                 <tr>
                     <td>{{ $product->title }}</td>
                     <td>{{ $product->description }}</td>
-                    <td>{{ $product->quantity }}</td>
                     <td>${{ $product->price }}</td>
                     <td>
                         <img height="100" width="100" src="/productimage/{{ $product->image }}">
                     </td>
                     <td>
-                        <a class="btn btn-primary" href="{{ url('updateproduct', $product->id) }}">Update</a>
+                        <a class="btn btn-primary" href="{{ url('updateview', $product->id) }}">Update</a>
                     </td>
                     <td>
                         <a class="btn btn-danger" href="{{ url('deleteproduct', $product->id) }}">Delete</a>

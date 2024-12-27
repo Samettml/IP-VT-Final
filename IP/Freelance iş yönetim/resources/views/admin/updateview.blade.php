@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <base href="/public">
+
+
+
     @include('admin.css')
     <style type="text/css">
         body {
@@ -77,13 +82,20 @@
         }
     </style>
 </head>
+
 <body>
+
+
+<!-- partial -->
 @include('admin.sidebar')
+
 @include('admin.navbar')
+
+
 
 <div class="container-fluid page-body-wrapper">
     <div class="container" align="center">
-        <h1 class="page-title">Add Product</h1>
+        <h1 class="page-title">Update Product</h1>
 
         @if(session()->has('message'))
             <div class="alert alert-success">
@@ -92,26 +104,34 @@
             </div>
         @endif
 
-        <form action="{{ url('uploadproduct') }}" method="post" enctype="multipart/form-data">
+        <form action="{{ url('updateproduct',$data->id) }}" method="post" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group">
                 <label for="title">Product Title</label>
-                <input type="text" id="title" name="title" placeholder="Give a product title" required>
+                <input type="text" id="title" name="title" value="{{$data->title}}" required>
             </div>
 
             <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" id="price" name="price" placeholder="Give a price" required>
+                <input type="number" id="price" name="price" value="{{$data->price}}" required>
             </div>
 
             <div class="form-group">
                 <label for="des">Description</label>
-                <input type="text" id="des" name="des" placeholder="Give a description" required>
+                <input type="text" id="des" name="des" value="{{$data->description}}" required>
             </div>
 
             <div class="form-group">
-                <label for="file">Upload Image</label>
+                <label for="des">Old Image</label>
+             <img height="100" width="100"  src="/productimage/{{$data->image}}">
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label for="file">Change Image</label>
                 <input type="file" id="file" name="file">
             </div>
 
@@ -122,6 +142,12 @@
     </div>
 </div>
 
+
+
+
+
+<!-- partial -->
 @include('admin.script')
+
 </body>
 </html>

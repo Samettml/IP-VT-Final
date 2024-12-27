@@ -18,16 +18,18 @@ class AdminController extends Controller
 
         $image=$request->file;
 
-        $imagename=time().'.'.$image->getClientOriginalExtension();
 
-        $request->file->move('productimage',$imagename);
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
 
-        $data->image=$imagename;
+            $request->file->move('productimage', $imagename);
+
+            $data->image = $imagename;
+
 
         $data->title=$request->title;
         $data->price=$request->price;
         $data->description=$request->des;
-        $data->quantity=$request->quantity;
+
 
         $data->save();
 
@@ -50,5 +52,40 @@ class AdminController extends Controller
      return redirect()->back();with('message','İlan başarıyla silindi');
 
  }
+
+        public function updateview($id)
+        {
+            $data=product::find($id);
+            return view('admin.updateview',compact('data'));
+
+        }
+
+        public function updateproduct(Request $request , $id)
+        {
+            $data=product::find($id);
+
+            $image=$request->file;
+
+            if($image) {
+
+                $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+                $request->file->move('productimage', $imagename);
+
+                $data->image = $imagename;
+
+
+            }
+            $data->title=$request->title;
+            $data->price=$request->price;
+            $data->description=$request->des;
+
+
+            $data->save();
+
+            return redirect()->back()->with('message','İlan başarıyla güncellendi');
+
+
+        }
 
 }

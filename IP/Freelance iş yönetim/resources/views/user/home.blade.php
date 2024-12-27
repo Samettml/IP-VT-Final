@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Scholar</title>
+    <title>Samett</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -69,7 +69,7 @@
                         <li class="scroll-to-section"><a href="#top" class="active">Anasayfa</a></li>
                         <li class="scroll-to-section"><a href="#services">Services</a></li>
                         <li class="scroll-to-section"><a href="#ilanlar">İlanlar</a></li>
-                        <li class="scroll-to-section"><a href="#team">Team</a></li>
+                        <li class="scroll-to-section"><a href="#yorumlar">Yorumlar</a></li>
 
                         @guest
                             <!-- Kullanıcı giriş yapmamışsa -->
@@ -139,7 +139,7 @@
                     </div>
                     <div class="item item-3">
                         <div class="header-text">
-                            <span class="category">Online İşler</span>
+                            <span class="category">Freelance iş</span>
                             <h2>Zaman tasarrufu sağlamak için </h2>
                             <p>Freelance iş platformumuz, zamandan tasarruf etmenizi ve işinizi kolayca yönetmenizi sağlar. Her şey parmaklarınızın ucunda!</p>
                             <div class="buttons">
