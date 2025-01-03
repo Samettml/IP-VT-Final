@@ -1,7 +1,7 @@
-Freelance Work Management System
+# Freelance Work Management System
 This project is a web application aimed at facilitating work processes for freelancers and employers. It provides comprehensive data management with a database structure consisting of 20 tables. The project is not fully completed, but the interface is entirely ready. As a management project, the admin panel includes features for adding, deleting, and updating job postings. User registration and login functionalities have been completed.
-
-
+- 
+ 
 
 
 
