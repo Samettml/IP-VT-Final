@@ -1,8 +1,19 @@
 # Freelance Work Management System
 This project is a web application aimed at facilitating work processes for freelancers and employers. It provides comprehensive data management with a database structure consisting of 20 tables. The project is not fully completed, but the interface is entirely ready. As a management project, the admin panel includes features for adding, deleting, and updating job postings. User registration and login functionalities have been completed.
-- 
- 
 
+# Features
+- Thanks to its simple design, job postings can be easily found.
+- It provides users with an easy registration and login experience.
+- Job postings can be created effortlessly.
+- Administrators can access, delete, update, or modify job postings.
+- Since this project is a freelance work management system, features like applying for or hiring jobs have not been included.
+
+
+
+
+
+
+# Screenshots
 
 
 
